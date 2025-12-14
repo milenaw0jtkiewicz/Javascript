@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Kod pobiera wszystkie linki <a> na stronie i wypisuje w konsoli ich adresy URL.
+
+    <a href="https://www.strona.pl">link1</a>
+    <a href="https://www.strona1.pl">link2</a>
+
+<script>
+
+
+let lista=document.querySelectorAll("a")
+console.log(lista);
+console.log('Pierwszy:' + lista[0].getAttribute('href'));
+console.log('Drugi:' + lista[1].getAttribute('href'));
+</script>
+
+</body>
+</html>
