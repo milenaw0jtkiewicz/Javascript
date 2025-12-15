@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Wyszukiwanie obrazka *.png</p>
+    <script>
+        let tekst="ikona jest w logo.png";
+        var pngRegex=/\S*\.png/i;
+        let position=tekst.search( pngRegex)
+        document.write(tekst.slice( position ));
+    
+    </script>
+    
+</body>
+</html>
