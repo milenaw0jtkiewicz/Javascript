@@ -9,9 +9,9 @@
     <p> wyszukiwanie kodu pocztowego</p>
   <script>
     let text="34-200 Sucha Beskidzka";
-    var kod_pocztowy=/\d{2}=\d{3}/;
+    var kod_pocztowy=/\d{2}-\d{3}/;
     var pozycja = text.search( kod_pocztowy);
-    document.write{text.slice(pozycja, pozycja+6));
+    document.write(text.slice(pozycja, pozycja+6));
   </script>
 </body>
 </html>
