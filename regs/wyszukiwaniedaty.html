@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Data moze byc przedsatwiona na wiele sposobow 09/28/2008, 9-28-2007 lub 09.28.2007.
+
+    <p> Wyszukiwanie daty</p>
+
+    <script>
+        let text="Sucha Beskidzka, 29.12.2021r";
+        var reg_date=/([0123]?\d)[-\ \/\.]([012]?\d)[-\ \/\.](\d{4})/;
+        let position=text.search(reg_date)
+        document.write(' Znaleziono na pozycji' + position + "<br>");
+        document.write(text.slice(position));
+    </script>
+    
+</body>
+</html>
