@@ -1,0 +1,4 @@
+let text = “Visit microsoft”;
+let result = text.replace(/microsoft/i,”W3Schools”);
+Program zamienia Microsoft na W3Schools
+
