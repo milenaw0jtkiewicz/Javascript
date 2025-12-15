@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Wyszukiwanie adresu e-mail:</p>
+    <script>
+        let text = "adres e-mail: john.fasola@in.pl";
+        var reg_email=/[-\w\.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}/;
+        let position=text.search(reg_email);
+        document.write(' Znaleziono na pozycji' +position + "<br>");
+        document.write( text.slice(position));
+
+    </script>
+    
+</body>
+</html>
