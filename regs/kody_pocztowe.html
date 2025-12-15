@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> Wyrazenia regularne - kody pocztowe</h3>
+    Funkcja match(wzorzec) zwraca wyszukany tekst
+    
+    <script>
+        const text="34-220 Maków Podhalański,
+        34-200 Sucha Beskidzka, 34-210, 34-205";
+        var wzorzec=/\d{2}-\d{3}/g;
+        let kody_pocztowe=text.match(wzorzec);
+        kody_pocztowe.forEach( function(kod)){
+            console.log(kod);
+        });
+    </script>
+</body>
+</html>
