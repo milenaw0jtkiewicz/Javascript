@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zmiana koloru tła przy uzywciu suwaka</title>
+</head>
+<body>
+
+    <form>
+        <label> Ustaw kolor:<br>1
+        <input type="range" min="0" max="255" id="zakres">255
+    </label>
+    </form><br>
+    <div>div</div>
+    <script>
+        let zakres = document.querySelector("#zakres");
+        zakres.addEventListener("change", wybierz);
+        let div = document.querySelector("div");
+        function wybierz(){
+            div.style.background=`rgb(${zakres.value},0,0)`;
+        }
+    </script>
+</body>
+</html>
