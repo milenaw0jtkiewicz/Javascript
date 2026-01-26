@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsługa złożonych elementów</title>
+</head>
+<body>
+    <p> Storage - obsluga zlozonych elementow</p>
+    <script>
+        const user = { 
+            name: "Karol",
+            surname: "nowak",
+            age: 20
+        
+        };
+        localStorage.setItem("myData", JSON.stringify(user));
+        const retrievedObject = JSON.parse(localStorage.getItem("myData"));
+        console.log(retrievedObject);
+    </script>
+    
+</body>
+</html>
