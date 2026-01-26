@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsługa złożonych elementów</title>
+</head>
+<body>
+    <script>
+        const owoc = { 
+            nazwa: "banan",
+            kolor: "żółty",
+            cena: 3
+        
+        };
+  localStorage.setItem("myData", JSON.stringify(owoc));
+        const retrievedObject = JSON.parse(localStorage.getItem("myData"));
+        console.log(retrievedObject);
+    </script>
+    
+</body>
+</html>
