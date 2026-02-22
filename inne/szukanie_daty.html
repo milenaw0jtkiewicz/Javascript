@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h3> Wyrazenia regualrne szukanie daty zamiana znakow </h3>
+  <script>
+  tekst="Sucha Beskidzka, 02.11.2022r";
+  let wzorzec = /\./g;
+  var newText=tekst.replace(wzorzec, '/');
+
+  document.write( newText);
+  
+
+</script>
+
+</body>
+</html>
