@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wstawianie nowych elementów HTML za innym elementem</title>
+</head>
+<body>
+    <script>
+        let container = document.createElement("div");
+        let p = document.createElement("p");
+        container.appendChild(p);
+        p.innerHTML="akapit";
+        let span = document.createElement("span");
+        p.after(span);
+        console.log(container.outerHTML);
+        //"<div><p></p><span></span></div>"
+    </script>
+    
+</body>
+</html>
