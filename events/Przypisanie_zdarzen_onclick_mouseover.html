@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funkcja addEventListener umozliwia dodanie kilku zdarzen</title>
+</head>
+<body>
+    <button id="myButton">Testuj</button>
+    <p id="Demo"></p>
+    <script>
+        let button = document.querySelector("#myButton");
+        button.addEventListener("mouseover", mover)
+        button.addEventListener("click", mclick);
+        function mover() {
+            document.querySelector("#Demo").innerHTML +- "over <br>";
+        }
+        function mclick(){
+            document.querySelector("#Demo").innerHTML += "click <br>";
+        }
+    </script>
+    
+</body>
+</html>
