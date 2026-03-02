@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p> Wyszukiwanie numeru tel</p>
+    <script>
+        let tekst ="tel. 656433445";
+        var wzorzec = /\d\d\d\d\d\d\d\d\d/;
+        var pozycja = tekst.search(wzorzec);
+        document.write('Cyfry znaleziono na pozycji:' + pozycja)
+    </script>
+    
+</body>
+</html>

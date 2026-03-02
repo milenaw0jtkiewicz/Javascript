@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Wyszukiwanie kodu pocztowego</p>
+    <script>
+        let tekst ="34-200 Sucha Beskidzka";
+        var kod_pocztowy=/\d{2}-\d{3}/;
+        var pozycja = tekst.search(kod_pocztowy);
+        document.write(tekst.slice(pozycja, pozycja+6));
+    </script>
+    
+</body>
+</html>
