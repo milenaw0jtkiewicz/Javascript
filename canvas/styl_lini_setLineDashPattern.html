@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <canvas width="400" height="200" id="canvas"></canvas>
+    <script>
+        const canvas=document.querySelector("#canvas");
+        const ctx=canvas.getContext("2d");
+        function drawDashedLine(pattern) {
+            ctx.beginPath();
+            ctx.setLineDash(pattern);
+            ctx.moveTo(0,y);
+            ctx.lineTo(300,y);
+            ctx.stroke();
+            y+=20;
+    }
+              </script>
+    
+</body>
+</html>
