@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tworzenie obrazu</title>
+</head>
+<body>
+    <canvas width="400" height="200" id="canvas"></canvas>
+
+<script>
+    const canvas=document.querySelector("#canvas");
+    const ctx=canvas.getContext("2d");
+
+    ctx.beginPath();
+    ctx.fillRect(25,25,100,100)
+    //wypelniony kwadrat
+
+    ctx.clearRect(45,45,60,60);
+    //pusty kwadratu
+
+    ctx.strokeRect(50,50,50,50);
+    //obrysowanie kwadratu
+</script>
+</body>
+</html>
