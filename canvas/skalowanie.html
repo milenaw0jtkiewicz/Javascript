@@ -1,4 +1,13 @@
-const img=new Image();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    const img=new Image();
 img.onload=() => {
 ctx.drawImage(img, 0, 0, 50, 50);
 };
@@ -17,3 +26,7 @@ DrawImage()
             ctx.stroke();
         };
 img.src=”backdrop.png”;
+</script>
+    
+</body>
+</html>
