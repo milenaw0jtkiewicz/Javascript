@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title> Animacja - slonce, drzewo i jabłka </title>
+</head>
+<body style="background: #9fdaf5;">
+    <canvas id="scena" width="400" height="400" style="background: white;"></canvas>
+    <script>
+        
+        const canvas = document.querySelector("#scena");
+        const ctx = canvas.getContext("2d");
+
+        let yJablka = 180; 
+        let xChmura = -50; 
+        let rotacjaSlonca = 0;
+
+        function rysuj() {
+            ctx.fillStyle = "#bee9ed"; ctx.fillRect(0, 0, 400, 300); //niebo
+            ctx.fillStyle = "#498f49"; ctx.fillRect(0, 300, 400, 100); // trawa
+
+            // rotacja slonca
+            rotacjaSlonca += 0.02;
+            ctx.save();
+            ctx.translate(330, 70);
+            
+            // cien slonca
+            ctx.shadowBlur = 15;
+            ctx.shadowColor = "yellow";
+
+            // gradient slonca
+            let gradSlonca = ctx.createRadialGradient(0, 0, 5, 0, 0, 25);
+            gradSlonca.addColorStop(0.2, "yellow");
+            gradSlonca.addColorStop(1, "#ff4800");
+
+            ctx.rotate(rotacjaSlonca);
+            ctx.fillStyle = gradSlonca;
+            ctx.beginPath(); ctx.arc(0, 0, 25, 0, Math.PI * 2); ctx.fill();
+
+            // promienie slonca
+            ctx.lineWidth = 3; ctx.strokeStyle = "orange";
+            for(let i=0; i<8; i++) {
+                ctx.rotate(Math.PI/4);
+                ctx.beginPath(); ctx.moveTo(30, 0); ctx.lineTo(45, 0); ctx.stroke();
+            }
+            ctx.restore();
+
+            // chmura
+            ctx.save();
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = "rgba(255, 255, 255, 1)";
+            xChmura += 1;
+            if (xChmura > 450) xChmura = -100;
+            ctx.fillStyle = "white";
+            ctx.beginPath(); ctx.arc(xChmura, 80, 20, 0, Math.PI*2); ctx.fill();
+            ctx.beginPath(); ctx.arc(xChmura + 20, 80, 25, 0, Math.PI*2); ctx.fill();
+            ctx.beginPath(); ctx.arc(xChmura + 40, 80, 20, 0, Math.PI*2); ctx.fill();
+            ctx.restore();
+
+            // drzewko
+            ctx.save();
+            ctx.shadowBlur = 5;
+            ctx.shadowColor = "black";
+            ctx.fillStyle = "brown"; ctx.fillRect(185, 220, 30, 80);
+            ctx.fillStyle = "#498f49";
+            ctx.beginPath();
+            ctx.moveTo(100, 230);
+            ctx.quadraticCurveTo(200, 50, 300, 230);
+            ctx.fill();
+            ctx.restore();
+
+            function rysujJablko(x, y, kolorGłówny, kolorGradientu) {
+                // ogonek jablka
+                ctx.save();
+                ctx.strokeStyle = "brown";
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(x, y - 8); 
+                ctx.lineTo(x, y - 18);
+                ctx.stroke();
+                ctx.restore();
+
+                // jablko
+                ctx.save();
+                ctx.shadowBlur = 8;
+                ctx.shadowColor = "rgba(0,0,0,0.9)";
+                ctx.shadowOffsetY = 2;
+
+                ctx.translate(x, y);
+                
+                let gradJablka = ctx.createRadialGradient(0, 0, 2, 0, 0, 10);
+                gradJablka.addColorStop(0, kolorGradientu);
+                gradJablka.addColorStop(1, kolorGłówny);
+
+                ctx.fillStyle = gradJablka;
+                ctx.beginPath(); ctx.arc(0, 0, 10, 0, Math.PI * 2); ctx.fill();
+                ctx.restore();
+            }
+
+            // jablka na drzewie
+            rysujJablko(150, 190, "red", "#8af07d");
+            rysujJablko(230, 190, "red", "#fa6b11");
+            rysujJablko(200, 155, "orange", "lightyellow");
+
+            // spadajace jablko z ogonkiem
+            if (yJablka < 350) yJablka += 2; 
+            rysujJablko(160, yJablka, "red", "pink");
+
+            requestAnimationFrame(rysuj);
+        }
+
+        rysuj();
+    </script>
+</body>
+</html>
