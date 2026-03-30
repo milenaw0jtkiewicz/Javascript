@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Toggle() uruchamia naprzemienne ukrywanie i wyswietlanie elementu</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"> </script>
+    <button id="toggle"> Przełącz akapit</button>
+     <p id="akapit1">Pierwszy akapit</p>
+     <script>
+
+        $(function(){
+            $("#toggle").click( function(){
+                $("#akapit1").toggle("fast");
+            });
+        });
+    </script>
+
+    
+    
+</body>
+</html>

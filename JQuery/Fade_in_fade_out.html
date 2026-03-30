@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>fadeIn() - wyświetlanie (przybliżanie) elementu </h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"> </script>
+    <button id="fadeIn"> Wyswietl diva</button>
+    <button id="fadeOut"> Ukryj diva</button>
+    <div style="width: 300px ; height: 300px;
+                background-color: rgb(183, 221, 247); display: none;"
+                id="div1"></div>
+     <script>
+        $(function() {
+            $("#fadeIn").click( function(){
+                $("#div1").fadeIn();
+            });
+         $("#fadeOut").click( function(){
+                $("#div1").fadeOut();
+        });
+
+    });
+    </script>
+</body>
+</html>
