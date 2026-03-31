@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script 
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+</script>
+
+<h1> slideDown() - opuszczane menu</h1>
+
+<div id="flip">Clik to slide down panel</div>
+<div id="panel">Hello World!</div>
+
+<script>
+  $( function(){
+    $("#flip").click( function(){
+       $("#panel").slideToggle();
+    } );
+  } );
+</script>
+<style>
+  #panel, #flip{
+    background-color: yellow;
+  }
+  #panel{
+    padding: 50px;
+    display: none;
+  }
+</style>
+</body>
+</html>
