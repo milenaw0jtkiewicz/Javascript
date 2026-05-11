@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        $(function($){
+            $("button").click( function(){
+                alert("text: " + $("#test").html());
+            });
+        })
+    
+        
+    </script>
+
+    <p id="test"> This is some <b> bold </b> text in a paragraph</p>
+    <button> show text </button>
+    
+</body>
+</html>

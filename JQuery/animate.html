@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button> Start animation</button>
+    <div style="background:green; height:100px;width:100px;position: absolute;"></div>
+    <script>
+        $(function($){
+            $("button").click(function(){
+                $("div").animate({  left: '250px',
+                                    opacity:'0.5',
+                                    height:'+=50px',
+                                    width:'+=50px'
+                }, "slow");
+
+                $("div").animate({top: '250px'}, "slow");
+                $("div").animate({left: '0px'}, "slow");
+                 $("div").animate({top: '0px'}, "slow");
+
+                
+            });
+            
+            
+        })
+
+        
+
+        
+
+        
+        
+    </script>
+    
+</body>
+</html>

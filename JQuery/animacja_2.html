@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button> Start animation</button>
+    <div style="background:green; height:50px;width:50px;position: absolute;"></div>
+    <script>
+        $(function($){
+            $("button").click(function(){
+                $("div").animate({ height:'toggle'});
+            });
+        })
+    </script>
+    
+</body>
+</html>
